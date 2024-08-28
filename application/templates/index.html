@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    
+    <style>
+        #faq{
+            margin: 40px 0;
+        }
+        h1{
+            text-align: center;
+        }
+        #faq #content {
+            columns: 300px 2;
+            padding: 0 20px;
+        }
+        #faq #content div {
+            break-inside: avoid;
+            line-height: 1.7;
+            padding: 15px;
+        }
+        h3{
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        p{
+            margin: 0 0 8px;
+        }
+        
+    </style>
+
+</head>
+<body class="intro-header">
+    <div style="background-image: url('static/images/wall.jpg'); background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background-position: 50%; height: 550px; width: 100%; ">
+
+<div class="d-flex justify-content-center mt-4">
+    <h2 style="color: white; padding-top: 15%;">
+    <b>IMAGE TO TEXT TO SPEECH</b>
+    </h2><br><br>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="{{ url_for('upload') }}" class="btn btn-outline-success m-2">IMAGE TO VOICE</a>
+    <a href="{{ url_for('decoded') }}" class="btn btn-outline-danger m-2">TEXT TO VOICE</a>
+</div>
+</div>
+<section id="faq">
+    <h1> HOW IT WORKS? </h1>
+    <div id="content">
+    <div>
+        <h3>What is Image to text to Speech convertor?</h3>
+        <p>Image,text to speech is a Webapplication for Image proccesing using Python and flask. The project is about recognizing and extracting 
+            the texts from any Image and translating that text into different language and thus creating an audio file for that text. You
+             can listen to any image containing text. Our product runs on the best text-to-speech engine technology which guarantees human-like 
+             voice, smart text recognition and natural sounding </p>
+    </div>
+    
+    <div>
+        <h3>How to Convert the Image to Text?</h3>
+        <p>For the Extraction of text from an image, Press the button "Image to Text" after that you have to upload the Image from the file. Then the text will 
+            be extracted from the image and from there you can Translate that text to different languages and get an audio file of it.
+        </p>
+    </div>
+    <div>
+        <h3> How is the Working of the WebApplication? </h3>
+        <p>Using pytesseract images will be read and recognized, pytesseract is an Optical Character Recognition tool for python.Using Googletrans the 
+            extracted text will be translated into different languages and then the Google Text to Speech API, commonly known as the gTTS API is 
+             used to create the audio file of it. 
+        </p>
+    </div>
+    <div>
+        <h3>How to Convert the Text to Voice? </h3>
+        <p>You can also Translate and Convert the text itself without uploading an Image, for that you have to press the button"Text to Voice" and 
+          there you can type the text and get the translation and the audio file of the text. 
+        </p>
+        </p>
+    </div>
+</div>
+</section>
+<footer class="bg-dark text-center text-white">
+    <div >
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright
+    </div>
+  </footer>
+</body>
+
+{% endblock %}
